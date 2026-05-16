@@ -1,10 +1,8 @@
 from fastapi.testclient import TestClient
-
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from app.main import app
 import pytest
-
 
 class Settings(BaseSettings):
     address: str = Field(default="127.0.0.1", alias="ADDRESS")
